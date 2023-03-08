@@ -1,10 +1,23 @@
+from numpy import sin, pi
+from scipy import quad
+import time
 
 
+a, b = 0, pi/2
 
+# Por suma de Rieman
+start_time=time.perf_counter()
+n=1000
+△ x  =(b-a)/n
+integral_rieman=(∑ i = 1 n f ( x i ∗ )△ x )
+time_rieman=time.perf_counter()-start_time
 
-Steps:
+# Por scipy
+start_time=time.perf_counter()
+scipy_integral, scipy_error = quad(a,b)
+time_scipy=time.perf_counter()-start_time
 
-1. Compute the integral of the `sin` function in the `[0, pi / 2]` interval using two methods:
-    1. Riemann sum (store the result in the `riemann_integral` variable).
-    2. SciPy integration method (store the result in the `scipy_integral` variable).
-2. Measure the time it takes for each one of the processes to complete and display the **difference** on screen. You will need to use some **performance counter** method from the `time` library.
+# Resultados
+print('El tiempo de Rieman ha sido de',time_rieman)
+print('El tiempo de Rieman ha sido de',time_scipy)
+print('La diferencia de tiempos ha sido de',rieman_time-time_scipy)
