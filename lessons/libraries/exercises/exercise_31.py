@@ -1,6 +1,7 @@
+import time
+
 import numpy as np
 from scipy import integrate
-import time
 
 a, b = 0,np.pi/2
 
