@@ -7,7 +7,7 @@ class Car:
 
 
 
-my_car=Car('red', '1234ABCD', 12340987)
+my_car = Car('red', '1234ABCD', 12340987)
 
 ext_color = my_car.color
 ext_license_plate = my_car._license_plate
